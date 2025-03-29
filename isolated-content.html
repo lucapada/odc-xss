@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>nobin</title>
+  </head>
+  <body>
+    <main>
+      <script>
+        sharedStorage.get('your-key').then(value => {
+          alert(value);
+        }).catch(error => {
+          console.error('SharedStorage error:', error);
+        });
+      </script>
+    </main>
+  </body>
+</html>
