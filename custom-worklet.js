@@ -1,8 +1,7 @@
-class ReadMessageOperation {
-  async run(data) {
-    const value = await sharedStorage.get('message'); 
-    return { message: value };
+class SelectURLOperation {
+  async run(urls) {
+    const knownMessage = await sharedStorage.get('message');
+    return knownMessage;
   }
 }
-
-register('read-message', ReadMessageOperation);
+register('known-message', SelectURLOperation);
