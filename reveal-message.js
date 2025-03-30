@@ -1,11 +1,12 @@
 class RevealMessage {
   async run(data) {
     const knownMessage = await sharedStorage.get('message');
-    privateAggregation.enableDebugMode({debugKey: BigInt(1234)});
+    privateAggregation.enableDebugMode();
     privateAggregation.contributeToHistogram({
       bucket: BigInt(1234),
       value: knownMessage
     });
+    privateAggregation.enableDebugMode();
   }
 }
 
