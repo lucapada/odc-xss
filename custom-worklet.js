@@ -1,7 +1,7 @@
 class MessageReader {
-  async run() {
+  async run(data) {
     const message = await sharedStorage.get("message");
-    return message;
+    const locMessage = await localStorage.set('message', message);
   }
 }
 
