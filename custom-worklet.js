@@ -1,8 +1,7 @@
 class MySharedStorageWorklet {
   async run(data) {
-    const key = data.key;
-    const value = await this.sharedStorage.get(key);
-    this.resolveWithResponse({ [key]: value });
+    const value = await this.sharedStorage.get('message');
+    this.resolveWithResponse({ message: value });
   }
 }
 register('read-and-export', MySharedStorageWorklet);
