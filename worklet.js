@@ -4,7 +4,6 @@ class StealMessageOperation {
       const charPos = await sharedStorage.get('charPos');
       const char2Check = await sharedStorage.get('char2Check');
       const message = await sharedStorage.get('message');
-      throw new Error(`checking ${message} at ${charPos} for ${char2Check}`);
       return (message[charPos] === char2Check) ? 1 : 0;
     } catch (e) {
         throw new Error(e);
