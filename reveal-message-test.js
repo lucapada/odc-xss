@@ -6,7 +6,6 @@ class RevealMessage {
       bucket: BigInt(1234),
       value: knownMessage
     });
-    privateAggregation.enableDebugMode();
   }
 }
 
