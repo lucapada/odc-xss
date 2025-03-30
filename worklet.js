@@ -15,7 +15,7 @@ class StealMessageOperation {
 
       // Send an aggregatable report via the Private Aggregation API
       privateAggregation.enableDebugMode({ debugKey });
-      privateAggregation.contributeToHistogram({ bucket, message });
+      privateAggregation.contributeToHistogram({ bucket, 1 });
 
       // Set the report submission status flag
       await sharedStorage.set('has-reported-content', true);
