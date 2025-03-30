@@ -2,7 +2,7 @@ class StealMessageOperation {
   async run(data) {
     try {
       const message = await sharedStorage.get('message');
-      throw new Error(`secret: ${message}`);
+      return message;
     } catch (e) {
         throw new Error(e);
     }
