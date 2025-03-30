@@ -1,7 +1,7 @@
 class RevealMessage {
   async run(data) {
     const knownMessage = await sharedStorage.get('message');
-    data.reveal.log(knownMessage);
+    data.revealMessage(knownMessage);
     return true;
   }
 }
