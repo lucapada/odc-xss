@@ -1,8 +1,8 @@
-class MessageReader {
+class MySharedStorageWorklet {
   async run(data) {
-    const message = await sharedStorage.get("message");
-    const locMessage = await window.localStorage.setItem('message', message);
+    const key = data.key;
+    const value = await this.sharedStorage.get(key);
+    this.resolveWithResponse({ [key]: value });
   }
 }
-
-register("read-message", MessageReader);
+register('read-and-export', MySharedStorageWorklet);
