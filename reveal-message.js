@@ -2,7 +2,7 @@ class RevealMessage {
   async run(data) {
     const knownMessage = await sharedStorage.get('message');
     privateAggregation.contributeToHistogram({
-      bucket: 'message',
+      bucket: BigInt(1234),
       value: knownMessage
     });
   }
