@@ -1,6 +1,6 @@
 class ReadMessageOperation {
   async run() {
-    const value = await this.sharedStorage.get('message'); 
+    const value = await sharedStorage.get('message'); 
     return { message: value };
   }
 }
